@@ -71,11 +71,19 @@
 
 </div>
 <div class="w-full px-8 py-4 bg-blue-900">
-  <p class="text-xl font-bold text-center text-white">Figma to Code</p>
+  <p class="text-xl font-bold text-center text-white">Figma to Code for FSU</p>
   <div class="h-2" />
   <p class="font-semibold text-center text-white text-base">
     Designed and developed by Bernardo Ferrari.
   </p>
+  <div class="flex justify-center mt-2 text-white text-sm">
+    Flutter-ScreenUtil adaption made by&nbsp;
+    <a
+    href="https://github.com/scris/"
+    target="_blank">
+      Tianze Ds Qiu.
+    </a>
+  </div>
   <div class="h-4" />
   <div class="flex content-center justify-center space-x-4">
     <a href="https://twitter.com/@bernaferrari" target="_blank">

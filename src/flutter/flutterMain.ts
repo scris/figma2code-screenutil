@@ -91,7 +91,7 @@ const flutterContainer = (
     // image = `Image.network("${url}"),`;
 
     // Flutter Web currently can't render network images :(
-    image = `FlutterLogo(size: ${Math.min(node.width, node.height)}),`;
+    image = `FlutterLogo(size: ${Math.min(node.width, node.height)}.r),`;
   }
 
   if (child.length > 0 && image.length > 0) {

@@ -161,19 +161,11 @@
         target="_blank">
         mobile, web, and desktop from a single codebase.
       </a>
-      You can test your creations by pasting them here:
     </p>
   </div>
-
-  <div class="my-1" />
-
-  <a href="https://codepen.io/bernardoferrari/pen/pogpBLB" target="_blank">
-    <button
-      class="px-4 py-2 font-semibold text-gray-800 bg-white border
-      border-gray-400 rounded shadow hover:bg-gray-50">
-      Flutter on CodePen
-    </button>
-  </a>
+  <p class="mt-2 text-sm">
+    Note, that with this plugin, generated code is specially for <b>flutter-screenutil</b>-enabled projects.
+  </p>
 
 </div>
 
@@ -191,7 +183,7 @@
         <p
           class="px-4 py-2 text-lg font-medium text-center bg-gray-200
           rounded-lg">
-          Code
+          Code for FSU
         </p>
         <button
           class="px-4 py-2 font-semibold text-blue-700 bg-transparent border

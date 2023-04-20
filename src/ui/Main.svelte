@@ -41,19 +41,19 @@
 <Tabs>
 
   <TabList>
-    <Tab>Tailwind 2</Tab>
     <Tab>Flutter</Tab>
+    <Tab>Tailwind 2</Tab>
     <Tab>SwiftUI</Tab>
     <Tab>HTML</Tab>
     <Tab>About</Tab>
   </TabList>
 
   <TabPanel>
-    <ScreenTailwind on:clipboard={updateClipboard} />
+    <ScreenFlutter on:clipboard={updateClipboard} />
   </TabPanel>
 
   <TabPanel>
-    <ScreenFlutter on:clipboard={updateClipboard} />
+    <ScreenTailwind on:clipboard={updateClipboard} />
   </TabPanel>
 
   <TabPanel>
