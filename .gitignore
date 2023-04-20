@@ -28,3 +28,7 @@ test/**/next-env.d.ts
 **/.vscode
 
 build
+
+public/code.js
+public/index.html
+public/code.js.map
