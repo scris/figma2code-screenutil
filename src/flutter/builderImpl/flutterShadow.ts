@@ -15,10 +15,10 @@ export const flutterBoxShadow = (node: AltSceneNode): string => {
 
       dropShadow.forEach((d: ShadowEffect) => {
         const color = `\ncolor: Color(0x${rgbTo8hex(d.color, d.color.a)}),`;
-        const radius = `\nblurRadius: ${numToAutoFixed(d.radius)},`;
+        const radius = `\nblurRadius: ${numToAutoFixed(d.radius)}.r,`;
         const offset = `\noffset: Offset(${numToAutoFixed(
           d.offset.x
-        )}, ${numToAutoFixed(d.offset.y)}),`;
+        )}.w, ${numToAutoFixed(d.offset.y)}.h),`;
 
         const property = color + radius + offset;
 
@@ -48,7 +48,7 @@ export const flutterElevationAndShadowColor = (
         dropShadow[0].color,
         dropShadow[0].color.a
       )}), `;
-      elevation = `\nelevation: ${numToAutoFixed(dropShadow[0].radius)}, `;
+      elevation = `\nelevation: ${numToAutoFixed(dropShadow[0].radius)}.r, `;
     }
   }
 

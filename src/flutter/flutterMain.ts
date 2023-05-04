@@ -37,7 +37,7 @@ const flutterWidgetGenerator = (
 ): string => {
   let comp = "";
 
-  // filter non visible nodes. This is necessary at this step because conversion already happened.
+  // filter non-visible nodes. This is necessary at this step because conversion already happened.
   const visibleSceneNode = sceneNode.filter((d) => d.visible !== false);
   const sceneLen = visibleSceneNode.length;
 
@@ -205,12 +205,14 @@ const addSpacingIfNeeded = (node: AltSceneNode): string => {
     // Don't add the SizedBox at last value. In Figma, itemSpacing CAN be negative; here it can't.
     if (node.parent.itemSpacing > 0) {
       if (node.parent.layoutMode === "HORIZONTAL") {
-        return `\nSizedBox(width: ${numToAutoFixed(node.parent.itemSpacing)}),`;
+        return `\nSizedBox(width: ${numToAutoFixed(
+          node.parent.itemSpacing
+        )}.w),`;
       } else {
         // node.parent.layoutMode === "VERTICAL"
         return `\nSizedBox(height: ${numToAutoFixed(
           node.parent.itemSpacing
-        )}),`;
+        )}.h),`;
       }
     }
   }

@@ -76,7 +76,7 @@ export const getTextStyle = (node: AltTextNode): string => {
   }
 
   if (node.fontSize !== figma.mixed) {
-    styleBuilder += `\nfontSize: ${numToAutoFixed(node.fontSize)},`;
+    styleBuilder += `\nfontSize: ${numToAutoFixed(node.fontSize)}.sp,`;
   }
 
   if (node.textDecoration === "UNDERLINE") {
@@ -109,7 +109,7 @@ export const getTextStyle = (node: AltTextNode): string => {
   // todo lineSpacing
   const letterSpacing = commonLetterSpacing(node);
   if (letterSpacing > 0) {
-    styleBuilder += `\nletterSpacing: ${numToAutoFixed(letterSpacing)},`;
+    styleBuilder += `\nletterSpacing: ${numToAutoFixed(letterSpacing)}.sp,`;
   }
 
   return styleBuilder;

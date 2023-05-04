@@ -15,7 +15,7 @@ export const flutterPadding = (node: AltSceneNode): string => {
   }
 
   if ("all" in padding) {
-    return `\npadding: const EdgeInsets.all(${numToAutoFixed(padding.all)}),`;
+    return `\npadding: EdgeInsets.all(${numToAutoFixed(padding.all)}.r),`;
   }
 
   // horizontal and vertical, as the default AutoLayout
@@ -25,35 +25,35 @@ export const flutterPadding = (node: AltSceneNode): string => {
   ) {
     const propHorizontalPadding =
       padding.horizontal > 0
-        ? `horizontal: ${numToAutoFixed(padding.horizontal)}, `
+        ? `horizontal: ${numToAutoFixed(padding.horizontal)}.w, `
         : "";
 
     const propVerticalPadding =
       padding.vertical > 0
-        ? `vertical: ${numToAutoFixed(padding.vertical)}, `
+        ? `vertical: ${numToAutoFixed(padding.vertical)}.h, `
         : "";
 
-    return `\npadding: const EdgeInsets.symmetric(${propHorizontalPadding}${propVerticalPadding}),`;
+    return `\npadding: EdgeInsets.symmetric(${propHorizontalPadding}${propVerticalPadding}),`;
   }
 
   let comp = "";
 
   // if left and right exists, verify if they are the same after [pxToLayoutSize] conversion.
   if (padding.left) {
-    comp += `left: ${numToAutoFixed(padding.left)}, `;
+    comp += `left: ${numToAutoFixed(padding.left)}.w, `;
   }
   if (padding.right) {
-    comp += `right: ${numToAutoFixed(padding.right)}, `;
+    comp += `right: ${numToAutoFixed(padding.right)}.w, `;
   }
   if (padding.top) {
-    comp += `top: ${numToAutoFixed(padding.top)}, `;
+    comp += `top: ${numToAutoFixed(padding.top)}.r, `;
   }
   if (padding.bottom) {
-    comp += `bottom: ${numToAutoFixed(padding.bottom)}, `;
+    comp += `bottom: ${numToAutoFixed(padding.bottom)}.r, `;
   }
 
   if (comp !== "") {
-    return `\npadding: const EdgeInsets.only(${comp}),`;
+    return `\npadding: EdgeInsets.only(${comp}),`;
   }
 
   return "";

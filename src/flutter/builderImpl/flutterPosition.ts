@@ -27,7 +27,7 @@ export const flutterPosition = (
       const diffX = numToAutoFixed(node.x - parentX);
       const diffY = numToAutoFixed(node.y - parentY);
 
-      const properties = `\nleft: ${diffX},\ntop: ${diffY},\nchild: ${child}`;
+      const properties = `\nleft: ${diffX}.w,\ntop: ${diffY}.h,\nchild: ${child}`;
       return `Positioned(${indentString(properties)}\n),`;
     }
   }
